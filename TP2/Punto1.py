@@ -1,4 +1,3 @@
-print("hello bitch")
 
 from math import isnan
 import requests
