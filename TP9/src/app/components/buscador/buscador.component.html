@@ -1,0 +1,16 @@
+<h1>Buscando: {{termino}} </h1>
+
+<div class="card-deck">
+    <h1>este cardeck</h1>
+    <div class="card" *ngFor="let platoAux of platosBusqueda; let i = index" style="max-width: 33%; padding: 10px;">
+        <h1>este card anidado</h1>
+        <img class="card-img-top" src="assets/img/{{platoAux.imagenPath}}" alt="Card image cap" style="max-height: 150px;">
+        <div class="card-body">
+            <h5 class="card-title">{{platoAux.nombre}}</h5>
+            <p class="card-text">COSO $ {{platoAux.precio}}</p>
+        </div>
+        <div class="card-footer" style="text-align: center;">
+            <button (click)="verPlato(platoAux.id)" class="btn btn-primary" style="width: 90%;">Detalle</button>
+        </div>
+    </div>
+</div>

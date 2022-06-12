@@ -1,0 +1,14 @@
+<h1>Nuestros Platos</h1>
+
+<div class="card-deck">
+    <div class="card" *ngFor="let platoAux of platosArr; let i=index" style="max-width: 25%; padding: 10px;">
+        <img class="card-img-top" src="assets/img/{{platoAux.imagenPath}}" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">{{platoAux.nombre}}</h5>
+            <p class="card-text">{{platoAux.precio}}</p>
+        </div>
+        <div class="card-footer" style="text-align: center;">
+            <button (click)="verPlato(platoAux.id)" class="btn btn-primary" style="width: 90%;">Detalle</button>
+        </div>
+    </div>
+</div>
