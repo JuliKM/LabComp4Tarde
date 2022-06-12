@@ -1,0 +1,21 @@
+<h1>{{instrumento.nombre | uppercase}}</h1>
+<hr>
+<div class="row">
+    <div class="col-md-4" style="text-align: center">
+        <img src="assets/img/{{instrumento.imagen}}" style="max-width: 300px;" class="img-fluid" [alt]="instrumento.nombre">
+        <br><br>
+        <a [routerLink]="['/instrumentos']" class="btn btn-outline-danger btn-block">Regresar</a>
+    </div>  
+    <div class="col-md-8">
+        <h3 style="color: crimson">{{instrumento.nombre}}</h3>
+        <hr>
+        <p><b>Cantidad Vendida:</b> ${{instrumento.cantidadVendida}}</p>
+        
+        <p><b>Precio:</b> ${{instrumento.precio}}</p>
+        <p><b>Costo Envio:</b> {{instrumento.costoEnvio}}</p>
+        <p><b>Marca:</b> {{instrumento.marca}}</p>
+        <p><b>Modelo:</b> {{instrumento.modelo}}</p>
+        <p><b>Descripcion:</b> {{instrumento.descripcion}}</p>
+    </div> 
+</div>
+

@@ -1,0 +1,14 @@
+<h1>Nuestros Productos</h1>
+
+<div class="card-deck">
+    <div class="card" *ngFor="let instrumentoAux of instrumentos; let i = index" style="max-width: 25%; padding: 10px;">
+      <img class="card-img-top" src="assets/img/{{instrumentoAux.imagen}}" alt="Card image cap" style="max-height: 150px;">
+      <div class="card-body">
+        <h5 class="card-title">{{instrumentoAux.nombre}}</h5>
+        <p class="card-text">$ {{instrumentoAux.precio}}</p>
+      </div>
+      <div class="card-footer" style="text-align: center;">
+        <button (click)="verInstrumento(instrumentoAux.id)" class="btn btn-primary" style="width: 90%;">Detalle</button>
+      </div>
+    </div>
+  </div>
